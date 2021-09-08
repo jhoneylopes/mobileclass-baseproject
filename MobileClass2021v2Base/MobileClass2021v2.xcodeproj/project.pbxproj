@@ -20,6 +20,7 @@
 		52502BFF26D0A214008BA58D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52502BFD26D0A214008BA58D /* LaunchScreen.storyboard */; };
 		52502C0A26D0A214008BA58D /* MobileClass2021v2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52502C0926D0A214008BA58D /* MobileClass2021v2Tests.swift */; };
 		52502C1526D0A214008BA58D /* MobileClass2021v2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52502C1426D0A214008BA58D /* MobileClass2021v2UITests.swift */; };
+		5272A5BF26E6FDDB00868617 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272A5BE26E6FDDB00868617 /* ItemDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		52502C1026D0A214008BA58D /* MobileClass2021v2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileClass2021v2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52502C1426D0A214008BA58D /* MobileClass2021v2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileClass2021v2UITests.swift; sourceTree = "<group>"; };
 		52502C1626D0A214008BA58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5272A5BE26E6FDDB00868617 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				520C522E26E05B6C000A9A5F /* Commons */,
 				520C522426DB03BC000A9A5F /* App */,
 				520C522526DB0BCD000A9A5F /* HomeUseCase */,
+				5272A5BD26E6FDB500868617 /* ItemDetailUseCase */,
 				520C522826DB1620000A9A5F /* BookmarksUseCase */,
 				520C522926DB1631000A9A5F /* SettingsUseCase */,
 			);
@@ -228,6 +231,14 @@
 				52502C1626D0A214008BA58D /* Info.plist */,
 			);
 			path = MobileClass2021v2UITests;
+			sourceTree = "<group>";
+		};
+		5272A5BD26E6FDB500868617 /* ItemDetailUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				5272A5BE26E6FDDB00868617 /* ItemDetailViewController.swift */,
+			);
+			path = ItemDetailUseCase;
 			sourceTree = "<group>";
 		};
 		52FCFA4C26D3DD49001BE39B /* Tests */ = {
@@ -372,6 +383,7 @@
 			files = (
 				52451D4726E1C1D30084C1AE /* FlipPresentAnimationController.swift in Sources */,
 				520C522D26E056B5000A9A5F /* SettingsView.swift in Sources */,
+				5272A5BF26E6FDDB00868617 /* ItemDetailViewController.swift in Sources */,
 				52502BF726D0A20E008BA58D /* HomeViewController.swift in Sources */,
 				52502BF326D0A20D008BA58D /* AppDelegate.swift in Sources */,
 				52502BF526D0A20E008BA58D /* SceneDelegate.swift in Sources */,

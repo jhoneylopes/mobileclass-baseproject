@@ -13,13 +13,12 @@
             <objects>
                 <viewController id="61c-rj-qdC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YKI-yJ-AVx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYk-2g-lPH">
-                                <rect key="frame" x="157" y="423" width="100" height="50"/>
+                                <rect key="frame" x="165" y="381.5" width="84" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="5mK-6y-8q0"/>
                                     <constraint firstAttribute="height" constant="50" id="sF1-u0-zhK"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -47,7 +46,7 @@
             <objects>
                 <viewController id="qAC-Sj-rK9" customClass="SettingsViewController" customModule="MobileClass2021v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ksX-0b-cDP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Peq-zc-LdA"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -59,7 +58,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jcc-BC-6Yf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-697" y="-840"/>
+            <point key="canvasLocation" x="-697.10144927536237" y="-840.40178571428567"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Rdx-MF-021">
@@ -81,26 +80,21 @@
             <objects>
                 <viewController id="aNb-zg-56f" customClass="HomeViewController" customModule="MobileClass2021v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZLf-0f-fcq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3j-ZW-y4h">
-                                <rect key="frame" x="157" y="423" width="100" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="QbN-Fa-MiK"/>
-                                    <constraint firstAttribute="height" constant="50" id="yxv-Uu-ybC"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="4vo-wp-LwV" kind="show" id="YhW-dh-5iv"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pw6-cF-zQB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uFq-qN-ajS"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="o3j-ZW-y4h" firstAttribute="centerY" secondItem="ZLf-0f-fcq" secondAttribute="centerY" id="A3A-7M-ugw"/>
-                            <constraint firstItem="o3j-ZW-y4h" firstAttribute="centerX" secondItem="ZLf-0f-fcq" secondAttribute="centerX" id="yJ3-0P-JtU"/>
+                            <constraint firstItem="pw6-cF-zQB" firstAttribute="top" secondItem="uFq-qN-ajS" secondAttribute="top" id="AmA-M9-nrD"/>
+                            <constraint firstItem="uFq-qN-ajS" firstAttribute="bottom" secondItem="pw6-cF-zQB" secondAttribute="bottom" id="ZD8-AK-cqy"/>
+                            <constraint firstItem="uFq-qN-ajS" firstAttribute="trailing" secondItem="pw6-cF-zQB" secondAttribute="trailing" id="m8x-sw-cO2"/>
+                            <constraint firstItem="pw6-cF-zQB" firstAttribute="leading" secondItem="uFq-qN-ajS" secondAttribute="leading" id="zsd-Rx-gUg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="u2w-9y-B5d">
@@ -110,6 +104,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="pw6-cF-zQB" id="Vyu-Te-IFz"/>
+                        <segue destination="4vo-wp-LwV" kind="show" identifier="HomeItemDetailSegue" id="n69-XV-b97"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiR-vs-Dq6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,7 +118,7 @@
             <objects>
                 <viewController id="4vo-wp-LwV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PmT-WB-zzj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="DdJ-1I-pkh"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
@@ -145,7 +143,7 @@
         <scene sceneID="zPV-1g-k2b">
             <objects>
                 <tabBarController id="o3P-cL-3sq" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="knr-c1-sjG">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="knr-c1-sjG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -181,7 +179,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Tui-Ck-x8Z"/>
+        <segue reference="n69-XV-b97"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bookmark" catalog="system" width="112" height="128"/>
@@ -189,9 +187,6 @@
         <image name="homekit" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
