@@ -10,6 +10,9 @@
 		520C522726DB1002000A9A5F /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520C522626DB1002000A9A5F /* Filter.storyboard */; };
 		520C522B26E05680000A9A5F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520C522A26E05680000A9A5F /* SettingsViewController.swift */; };
 		520C522D26E056B5000A9A5F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520C522C26E056B5000A9A5F /* SettingsView.swift */; };
+		522BBBE226ED421600B2EB83 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522BBBE126ED421600B2EB83 /* UserDTO.swift */; };
+		522BBBE526ED424A00B2EB83 /* UserResponse200.json in Resources */ = {isa = PBXBuildFile; fileRef = 522BBBE426ED424A00B2EB83 /* UserResponse200.json */; };
+		522BBBE626ED425400B2EB83 /* UserResponse200.json in Resources */ = {isa = PBXBuildFile; fileRef = 522BBBE426ED424A00B2EB83 /* UserResponse200.json */; };
 		52451D4426E1C1A40084C1AE /* SettingsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52451D4326E1C1A40084C1AE /* SettingsDetailsViewController.swift */; };
 		52451D4726E1C1D30084C1AE /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52451D4626E1C1D30084C1AE /* FlipPresentAnimationController.swift */; };
 		52502BF326D0A20D008BA58D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52502BF226D0A20D008BA58D /* AppDelegate.swift */; };
@@ -18,7 +21,7 @@
 		52502BFA26D0A20E008BA58D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52502BF826D0A20E008BA58D /* Main.storyboard */; };
 		52502BFC26D0A214008BA58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52502BFB26D0A214008BA58D /* Assets.xcassets */; };
 		52502BFF26D0A214008BA58D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52502BFD26D0A214008BA58D /* LaunchScreen.storyboard */; };
-		52502C0A26D0A214008BA58D /* MobileClass2021v2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52502C0926D0A214008BA58D /* MobileClass2021v2Tests.swift */; };
+		52502C0A26D0A214008BA58D /* UserDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52502C0926D0A214008BA58D /* UserDTOTests.swift */; };
 		52502C1526D0A214008BA58D /* MobileClass2021v2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52502C1426D0A214008BA58D /* MobileClass2021v2UITests.swift */; };
 		5272A5BF26E6FDDB00868617 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272A5BE26E6FDDB00868617 /* ItemDetailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +47,8 @@
 		520C522626DB1002000A9A5F /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
 		520C522A26E05680000A9A5F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		520C522C26E056B5000A9A5F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		522BBBE126ED421600B2EB83 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		522BBBE426ED424A00B2EB83 /* UserResponse200.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserResponse200.json; sourceTree = "<group>"; };
 		52451D4326E1C1A40084C1AE /* SettingsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDetailsViewController.swift; sourceTree = "<group>"; };
 		52451D4626E1C1D30084C1AE /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
 		52502BEF26D0A20D008BA58D /* MobileClass2021v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileClass2021v2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,7 +60,7 @@
 		52502BFE26D0A214008BA58D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52502C0026D0A214008BA58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52502C0526D0A214008BA58D /* MobileClass2021v2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileClass2021v2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		52502C0926D0A214008BA58D /* MobileClass2021v2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileClass2021v2Tests.swift; sourceTree = "<group>"; };
+		52502C0926D0A214008BA58D /* UserDTOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTOTests.swift; sourceTree = "<group>"; };
 		52502C0B26D0A214008BA58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52502C1026D0A214008BA58D /* MobileClass2021v2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileClass2021v2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52502C1426D0A214008BA58D /* MobileClass2021v2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileClass2021v2UITests.swift; sourceTree = "<group>"; };
@@ -103,6 +108,7 @@
 		520C522326DB0361000A9A5F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				522BBBDF26ED41CF00B2EB83 /* Service */,
 				520C522E26E05B6C000A9A5F /* Commons */,
 				520C522426DB03BC000A9A5F /* App */,
 				520C522526DB0BCD000A9A5F /* HomeUseCase */,
@@ -162,6 +168,30 @@
 			path = Ext;
 			sourceTree = "<group>";
 		};
+		522BBBDF26ED41CF00B2EB83 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				522BBBE026ED41D800B2EB83 /* Models */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		522BBBE026ED41D800B2EB83 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				522BBBE126ED421600B2EB83 /* UserDTO.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		522BBBE326ED422F00B2EB83 /* ResponseJSON */ = {
+			isa = PBXGroup;
+			children = (
+				522BBBE426ED424A00B2EB83 /* UserResponse200.json */,
+			);
+			path = ResponseJSON;
+			sourceTree = "<group>";
+		};
 		52451D4126E1C1730084C1AE /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,7 +248,7 @@
 		52502C0826D0A214008BA58D /* MobileClass2021v2Tests */ = {
 			isa = PBXGroup;
 			children = (
-				52502C0926D0A214008BA58D /* MobileClass2021v2Tests.swift */,
+				52502C0926D0A214008BA58D /* UserDTOTests.swift */,
 				52502C0B26D0A214008BA58D /* Info.plist */,
 			);
 			path = MobileClass2021v2Tests;
@@ -244,6 +274,7 @@
 		52FCFA4C26D3DD49001BE39B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				522BBBE326ED422F00B2EB83 /* ResponseJSON */,
 				52502C0826D0A214008BA58D /* MobileClass2021v2Tests */,
 				52502C1326D0A214008BA58D /* MobileClass2021v2UITests */,
 			);
@@ -356,6 +387,7 @@
 				52502BFF26D0A214008BA58D /* LaunchScreen.storyboard in Resources */,
 				52502BFC26D0A214008BA58D /* Assets.xcassets in Resources */,
 				520C522726DB1002000A9A5F /* Filter.storyboard in Resources */,
+				522BBBE526ED424A00B2EB83 /* UserResponse200.json in Resources */,
 				52502BFA26D0A20E008BA58D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +396,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				522BBBE626ED425400B2EB83 /* UserResponse200.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +420,7 @@
 				52502BF726D0A20E008BA58D /* HomeViewController.swift in Sources */,
 				52502BF326D0A20D008BA58D /* AppDelegate.swift in Sources */,
 				52502BF526D0A20E008BA58D /* SceneDelegate.swift in Sources */,
+				522BBBE226ED421600B2EB83 /* UserDTO.swift in Sources */,
 				52451D4426E1C1A40084C1AE /* SettingsDetailsViewController.swift in Sources */,
 				520C522B26E05680000A9A5F /* SettingsViewController.swift in Sources */,
 			);
@@ -396,7 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52502C0A26D0A214008BA58D /* MobileClass2021v2Tests.swift in Sources */,
+				52502C0A26D0A214008BA58D /* UserDTOTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
