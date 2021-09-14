@@ -24,6 +24,7 @@
 		52502C0A26D0A214008BA58D /* UserDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52502C0926D0A214008BA58D /* UserDTOTests.swift */; };
 		52502C1526D0A214008BA58D /* MobileClass2021v2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52502C1426D0A214008BA58D /* MobileClass2021v2UITests.swift */; };
 		5272A5BF26E6FDDB00868617 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272A5BE26E6FDDB00868617 /* ItemDetailViewController.swift */; };
+		52F5EC8026F13E96004A445B /* MobileClass2021v2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EC7E26F13E96004A445B /* MobileClass2021v2.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		52502C1426D0A214008BA58D /* MobileClass2021v2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileClass2021v2UITests.swift; sourceTree = "<group>"; };
 		52502C1626D0A214008BA58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5272A5BE26E6FDDB00868617 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		52F5EC7F26F13E96004A445B /* MobileClass2021v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MobileClass2021v2.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				52502BFB26D0A214008BA58D /* Assets.xcassets */,
 				52502BFD26D0A214008BA58D /* LaunchScreen.storyboard */,
 				52502C0026D0A214008BA58D /* Info.plist */,
+				52F5EC7E26F13E96004A445B /* MobileClass2021v2.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52451D4726E1C1D30084C1AE /* FlipPresentAnimationController.swift in Sources */,
+				52F5EC8026F13E96004A445B /* MobileClass2021v2.xcdatamodeld in Sources */,
 				520C522D26E056B5000A9A5F /* SettingsView.swift in Sources */,
 				5272A5BF26E6FDDB00868617 /* ItemDetailViewController.swift in Sources */,
 				52502BF726D0A20E008BA58D /* HomeViewController.swift in Sources */,
@@ -755,6 +759,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		52F5EC7E26F13E96004A445B /* MobileClass2021v2.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				52F5EC7F26F13E96004A445B /* MobileClass2021v2.xcdatamodel */,
+			);
+			currentVersion = 52F5EC7F26F13E96004A445B /* MobileClass2021v2.xcdatamodel */;
+			path = MobileClass2021v2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 52502BE726D0A20D008BA58D /* Project object */;
 }
