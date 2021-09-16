@@ -113,10 +113,10 @@
             </objects>
             <point key="canvasLocation" x="-3039" y="-134"/>
         </scene>
-        <!--View Controller-->
+        <!--Item Detail View Controller-->
         <scene sceneID="p4F-ef-Fzr">
             <objects>
-                <viewController id="4vo-wp-LwV" sceneMemberID="viewController">
+                <viewController id="4vo-wp-LwV" customClass="ItemDetailViewController" customModule="MobileClass2021v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PmT-WB-zzj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

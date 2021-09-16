@@ -15,6 +15,16 @@ import Foundation
      }
  }
  */
-struct UserDTO: Codable {
+
+// Decodable && Encodable
+struct UserDTO: Decodable {
+    let id: String?
     let email: String?
+    let signedup: String?
+    let address: Address
+}
+
+struct Address: Decodable {
+    let street: String
+    let city: String
 }
