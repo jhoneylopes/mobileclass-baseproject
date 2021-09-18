@@ -7,6 +7,11 @@ protocol ItemDetailViewControllerDelegate: AnyObject {
 final class ItemDetailViewController: UIViewController {
     weak var delegate: ItemDetailViewControllerDelegate?
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+
     private func closeItemDetailViewController() {
         delegate?.popItemDetailViewController()
     }
