@@ -24,6 +24,12 @@
 		52502C0A26D0A214008BA58D /* UserDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52502C0926D0A214008BA58D /* UserDTOTests.swift */; };
 		52502C1526D0A214008BA58D /* MobileClass2021v2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52502C1426D0A214008BA58D /* MobileClass2021v2UITests.swift */; };
 		5272A5BF26E6FDDB00868617 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272A5BE26E6FDDB00868617 /* ItemDetailViewController.swift */; };
+		5283218426F65B14009CE90D /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283218326F65B14009CE90D /* BookmarksViewController.swift */; };
+		5283218B26F678BF009CE90D /* BookmarksDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283218A26F678BF009CE90D /* BookmarksDTO.swift */; };
+		528321A826F7BA25009CE90D /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528321A726F7BA25009CE90D /* FilterViewController.swift */; };
+		528321AA26F7BF3C009CE90D /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528321A926F7BF3C009CE90D /* UserDefaultsWrapper.swift */; };
+		528321AD26F7C22C009CE90D /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528321AC26F7C22C009CE90D /* DependencyManager.swift */; };
+		528321AF26F7C421009CE90D /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528321AE26F7C421009CE90D /* DependencyInjector.swift */; };
 		52F5EC8026F13E96004A445B /* MobileClass2021v2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52F5EC7E26F13E96004A445B /* MobileClass2021v2.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +73,12 @@
 		52502C1426D0A214008BA58D /* MobileClass2021v2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileClass2021v2UITests.swift; sourceTree = "<group>"; };
 		52502C1626D0A214008BA58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5272A5BE26E6FDDB00868617 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		5283218326F65B14009CE90D /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
+		5283218A26F678BF009CE90D /* BookmarksDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksDTO.swift; sourceTree = "<group>"; };
+		528321A726F7BA25009CE90D /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		528321A926F7BF3C009CE90D /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
+		528321AC26F7C22C009CE90D /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
+		528321AE26F7C421009CE90D /* DependencyInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjector.swift; sourceTree = "<group>"; };
 		52F5EC7F26F13E96004A445B /* MobileClass2021v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MobileClass2021v2.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,12 +123,14 @@
 		520C522326DB0361000A9A5F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				528321AB26F7C222009CE90D /* Core */,
 				522BBBDF26ED41CF00B2EB83 /* Service */,
 				520C522E26E05B6C000A9A5F /* Commons */,
 				520C522426DB03BC000A9A5F /* App */,
 				520C522526DB0BCD000A9A5F /* HomeUseCase */,
 				5272A5BD26E6FDB500868617 /* ItemDetailUseCase */,
 				520C522826DB1620000A9A5F /* BookmarksUseCase */,
+				528321A626F7BA02009CE90D /* FilterUseCase */,
 				520C522926DB1631000A9A5F /* SettingsUseCase */,
 			);
 			path = Sources;
@@ -127,6 +141,7 @@
 			children = (
 				52502BF226D0A20D008BA58D /* AppDelegate.swift */,
 				52502BF426D0A20E008BA58D /* SceneDelegate.swift */,
+				528321AE26F7C421009CE90D /* DependencyInjector.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -142,6 +157,7 @@
 		520C522826DB1620000A9A5F /* BookmarksUseCase */ = {
 			isa = PBXGroup;
 			children = (
+				5283218326F65B14009CE90D /* BookmarksViewController.swift */,
 			);
 			path = BookmarksUseCase;
 			sourceTree = "<group>";
@@ -159,6 +175,7 @@
 		520C522E26E05B6C000A9A5F /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				528321A126F793BB009CE90D /* Managers */,
 				520C522F26E05B72000A9A5F /* Ext */,
 			);
 			path = Commons;
@@ -174,6 +191,7 @@
 		522BBBDF26ED41CF00B2EB83 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				5283218526F65BAC009CE90D /* Database */,
 				522BBBE026ED41D800B2EB83 /* Models */,
 			);
 			path = Service;
@@ -182,6 +200,7 @@
 		522BBBE026ED41D800B2EB83 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5283218C26F77A9A009CE90D /* Bookmarks */,
 				522BBBE126ED421600B2EB83 /* UserDTO.swift */,
 			);
 			path = Models;
@@ -272,6 +291,53 @@
 				5272A5BE26E6FDDB00868617 /* ItemDetailViewController.swift */,
 			);
 			path = ItemDetailUseCase;
+			sourceTree = "<group>";
+		};
+		5283218526F65BAC009CE90D /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				5283218726F65BCB009CE90D /* UserDefaultsWrapper */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		5283218726F65BCB009CE90D /* UserDefaultsWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				528321A926F7BF3C009CE90D /* UserDefaultsWrapper.swift */,
+			);
+			path = UserDefaultsWrapper;
+			sourceTree = "<group>";
+		};
+		5283218C26F77A9A009CE90D /* Bookmarks */ = {
+			isa = PBXGroup;
+			children = (
+				5283218A26F678BF009CE90D /* BookmarksDTO.swift */,
+			);
+			path = Bookmarks;
+			sourceTree = "<group>";
+		};
+		528321A126F793BB009CE90D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		528321A626F7BA02009CE90D /* FilterUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				528321A726F7BA25009CE90D /* FilterViewController.swift */,
+			);
+			path = FilterUseCase;
+			sourceTree = "<group>";
+		};
+		528321AB26F7C222009CE90D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				528321AC26F7C22C009CE90D /* DependencyManager.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		52FCFA4C26D3DD49001BE39B /* Tests */ = {
@@ -417,14 +483,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				528321AF26F7C421009CE90D /* DependencyInjector.swift in Sources */,
+				528321AA26F7BF3C009CE90D /* UserDefaultsWrapper.swift in Sources */,
 				52451D4726E1C1D30084C1AE /* FlipPresentAnimationController.swift in Sources */,
 				52F5EC8026F13E96004A445B /* MobileClass2021v2.xcdatamodeld in Sources */,
 				520C522D26E056B5000A9A5F /* SettingsView.swift in Sources */,
 				5272A5BF26E6FDDB00868617 /* ItemDetailViewController.swift in Sources */,
 				52502BF726D0A20E008BA58D /* HomeViewController.swift in Sources */,
 				52502BF326D0A20D008BA58D /* AppDelegate.swift in Sources */,
+				528321AD26F7C22C009CE90D /* DependencyManager.swift in Sources */,
+				5283218426F65B14009CE90D /* BookmarksViewController.swift in Sources */,
 				52502BF526D0A20E008BA58D /* SceneDelegate.swift in Sources */,
+				528321A826F7BA25009CE90D /* FilterViewController.swift in Sources */,
 				522BBBE226ED421600B2EB83 /* UserDTO.swift in Sources */,
+				5283218B26F678BF009CE90D /* BookmarksDTO.swift in Sources */,
 				52451D4426E1C1A40084C1AE /* SettingsDetailsViewController.swift in Sources */,
 				520C522B26E05680000A9A5F /* SettingsViewController.swift in Sources */,
 			);
@@ -769,6 +841,7 @@
 			currentVersion = 52F5EC7F26F13E96004A445B /* MobileClass2021v2.xcdatamodel */;
 			path = MobileClass2021v2.xcdatamodeld;
 			sourceTree = "<group>";
+			usesTabs = 0;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */

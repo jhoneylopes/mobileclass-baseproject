@@ -4,6 +4,9 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+        DependencyInjector.load()
+
         return true
     }
 
@@ -16,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         )
     }
 
+    // MARK: CoreData
+
     func applicationWillTerminate(_ application: UIApplication) {
         self.saveContext()
     }
@@ -23,24 +28,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Core Data stack
     lazy var persistentContainer: NSPersistentContainer = {
         /*
-        The persistent container for the application. This implementation
-        creates and returns a container, having loaded the store for the
-        application to it. This property is optional since there are legitimate
-        error conditions that could cause the creation of the store to fail.
+         O "container" de persistência para a aplicação. Essa implementação cria e retorna um contêiner, tendo carregado nele o armazenamento do aplicativo. Essa propriedade é opcional, pois existem condições de erro legítimas que podem causar falha na criação do armazenamento.
         */
         let container = NSPersistentContainer(name: "MobileClass2021v2")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            /*
-            Typical reasons for an error here include:
-            * The parent directory does not exist, cannot be created, or disallows writing.
-            * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-            * The device is out of space.
-            * The store could not be migrated to the current model version.
-            Check the error message to determine what the actual problem was.
-            */
+            // Substitua esta implementação por um código para tratar o erro de maneira apropriada.
+            // fatalError () faz com que o aplicativo gere um log de travamento e seja encerrado. Você não deve usar esta função em um aplicativo de remessa, embora possa ser útil durante o desenvolvimento.
+             /*
+             Os motivos típicos para um erro aqui incluem:
+             * O diretório pai não existe, não pode ser criado ou não permite a gravação.
+             * O armazenamento persistente não está acessível devido a permissões ou proteção de dados quando o dispositivo está bloqueado.
+             * O dispositivo está sem espaço.
+             * O armazenamento não pôde ser migrada para a versão do modelo atual.
+
+             Verifique a mensagem de erro para determinar qual era o problema real.
+             */
             fatalError("Unresolved error \(error), \(error.userInfo)")
         }})
         return container
@@ -53,8 +56,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             do {
                 try context.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                // Substitua esta implementação por um código para tratar o erro de maneira apropriada.
+                // fatalError() faz com que o aplicativo gere um log de travamento e seja encerrado. Você não deve usar esta função em um aplicativo de remessa, embora possa ser útil durante o desenvolvimento.
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }

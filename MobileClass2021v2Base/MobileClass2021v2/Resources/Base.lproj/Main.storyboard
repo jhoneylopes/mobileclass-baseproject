@@ -16,30 +16,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYk-2g-lPH">
-                                <rect key="frame" x="165" y="381.5" width="84" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="sF1-u0-zhK"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Go To Detail"/>
-                                <connections>
-                                    <segue destination="4vo-wp-LwV" kind="presentation" id="Tui-Ck-x8Z"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="igr-mV-HcM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookmarksViewCell" rowHeight="93" id="hBu-54-0Pp">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="93"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hBu-54-0Pp" id="fbQ-p1-AuN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bqh-Dy-few"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
-                            <constraint firstItem="aYk-2g-lPH" firstAttribute="centerX" secondItem="YKI-yJ-AVx" secondAttribute="centerX" id="8Hb-mA-t9i"/>
-                            <constraint firstItem="aYk-2g-lPH" firstAttribute="centerY" secondItem="YKI-yJ-AVx" secondAttribute="centerY" id="N4d-gg-exQ"/>
+                            <constraint firstItem="bqh-Dy-few" firstAttribute="bottom" secondItem="igr-mV-HcM" secondAttribute="bottom" id="0uY-9f-vax"/>
+                            <constraint firstItem="bqh-Dy-few" firstAttribute="trailing" secondItem="igr-mV-HcM" secondAttribute="trailing" id="AQp-K2-kW4"/>
+                            <constraint firstItem="igr-mV-HcM" firstAttribute="leading" secondItem="bqh-Dy-few" secondAttribute="leading" id="qRF-dV-RmX"/>
+                            <constraint firstItem="igr-mV-HcM" firstAttribute="top" secondItem="bqh-Dy-few" secondAttribute="top" constant="-44" id="t4z-uT-p0e"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Bookmarks" image="bookmark" catalog="system" id="gfh-gQ-RT5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AfL-Lx-wrM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1839" y="-840"/>
+            <point key="canvasLocation" x="-1839.1304347826087" y="-840.40178571428567"/>
         </scene>
         <!--Settings-->
         <scene sceneID="NZ0-4R-9Li">
@@ -97,9 +102,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="u2w-9y-B5d">
-                        <barButtonItem key="rightBarButtonItem" title="Filter" id="jHa-D6-EIL">
+                        <barButtonItem key="leftBarButtonItem" title="Filter" id="jHa-D6-EIL">
                             <connections>
                                 <segue destination="ce4-q3-pHd" kind="show" id="cI5-E7-ZGu"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="eVo-U9-bZf">
+                            <connections>
+                                <action selector="addNewItemListAction:" destination="aNb-zg-56f" id="qJL-UM-aaW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -177,9 +187,6 @@
             <point key="canvasLocation" x="-3038" y="-840"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="n69-XV-b97"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>

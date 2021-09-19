@@ -8,20 +8,53 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Filter View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="FilterViewController" customModule="MobileClass2021v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BWb-sX-Tpx">
+                                <rect key="frame" x="347" y="69" width="49" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="UDb-AB-AoL"/>
+                                    <constraint firstAttribute="width" constant="47" id="eGT-HK-abh"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sortOptionAction:" destination="Y6W-OH-hqX" eventType="valueChanged" id="aa1-Sc-5OW"/>
+                                    <action selector="sortOptionAction:" destination="dFo-qk-aHJ" eventType="valueChanged" id="wyH-sg-emf"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ordenar de A a Z" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mv6-bJ-5lT">
+                                <rect key="frame" x="20" y="69" width="319" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Nmc-7Z-Tqi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BWb-sX-Tpx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="25" id="7Cl-5C-u3y"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BWb-sX-Tpx" secondAttribute="trailing" constant="20" id="LPA-jI-Tfn"/>
+                            <constraint firstItem="BWb-sX-Tpx" firstAttribute="leading" secondItem="mv6-bJ-5lT" secondAttribute="trailing" constant="8" symbolic="YES" id="Otv-Mv-SaT"/>
+                            <constraint firstItem="mv6-bJ-5lT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="QPC-Fr-8Js"/>
+                            <constraint firstItem="mv6-bJ-5lT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="25" id="xF3-Te-bi4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="switchComponent" destination="BWb-sX-Tpx" id="Vef-h6-iWW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="dFo-qk-aHJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="89"/>
+            <point key="canvasLocation" x="0.0" y="88.392857142857139"/>
         </scene>
     </scenes>
     <resources>
