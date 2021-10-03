@@ -129,14 +129,63 @@
                     <view key="view" contentMode="scaleToFill" id="PmT-WB-zzj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xnx-ju-eiy">
+                                <rect key="frame" x="8" y="104" width="398" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="pg7-c1-iiQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flame.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EEv-AD-MdM">
+                                <rect key="frame" x="41" y="191.5" width="332" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="dOf-4R-aSt"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRa-De-5EH">
+                                <rect key="frame" x="41" y="324" width="332" height="323"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="323" id="HJ1-xN-jeW"/>
+                                </constraints>
+                                <string key="text">Email: test@gmail.com
+
+Telefone: +55 988889999
+</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="DdJ-1I-pkh"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DdJ-1I-pkh" firstAttribute="trailing" secondItem="EEv-AD-MdM" secondAttribute="trailing" constant="41" id="3nj-35-R6Z"/>
+                            <constraint firstItem="EEv-AD-MdM" firstAttribute="leading" secondItem="DdJ-1I-pkh" secondAttribute="leading" constant="41" id="Hrm-nR-nMv"/>
+                            <constraint firstItem="yRa-De-5EH" firstAttribute="top" secondItem="EEv-AD-MdM" secondAttribute="bottom" constant="32" id="JUm-aq-j44"/>
+                            <constraint firstItem="Xnx-ju-eiy" firstAttribute="top" secondItem="DdJ-1I-pkh" secondAttribute="top" constant="16" id="gfF-sY-VxG"/>
+                            <constraint firstItem="Xnx-ju-eiy" firstAttribute="leading" secondItem="DdJ-1I-pkh" secondAttribute="leading" constant="8" id="lrh-af-MdU"/>
+                            <constraint firstItem="DdJ-1I-pkh" firstAttribute="trailing" secondItem="yRa-De-5EH" secondAttribute="trailing" constant="41" id="oFo-DS-4w4"/>
+                            <constraint firstItem="EEv-AD-MdM" firstAttribute="top" secondItem="Xnx-ju-eiy" secondAttribute="bottom" constant="44" id="pyg-rp-8bc"/>
+                            <constraint firstItem="yRa-De-5EH" firstAttribute="leading" secondItem="DdJ-1I-pkh" secondAttribute="leading" constant="41" id="ro6-2m-aVz"/>
+                            <constraint firstItem="DdJ-1I-pkh" firstAttribute="trailing" secondItem="Xnx-ju-eiy" secondAttribute="trailing" constant="8" id="uhh-2p-dVb"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cFM-fC-QjQ"/>
+                    <navigationItem key="navigationItem" id="cFM-fC-QjQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="LUJ-N2-wP0"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mainTextView" destination="yRa-De-5EH" id="diu-gN-DGf"/>
+                        <outlet property="titleLabel" destination="Xnx-ju-eiy" id="rUl-07-zIG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKI-WT-6fI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1839" y="-135"/>
+            <point key="canvasLocation" x="-1839.1304347826087" y="-135.26785714285714"/>
         </scene>
         <!--Filter-->
         <scene sceneID="hLu-yh-wk9">
@@ -189,16 +238,17 @@
     </scenes>
     <resources>
         <image name="bookmark" catalog="system" width="112" height="128"/>
+        <image name="flame.fill" catalog="system" width="108" height="128"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

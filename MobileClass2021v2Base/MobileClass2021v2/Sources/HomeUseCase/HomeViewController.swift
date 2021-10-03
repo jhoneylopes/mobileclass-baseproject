@@ -29,7 +29,11 @@ class HomeViewController: UIViewController, ItemDetailViewControllerDelegate {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == homeItemDetailSegue {
+            guard let indexPath = sender as? IndexPath else { return }
+            let item = coreDataObjects[indexPath.row]
+
             let vc = segue.destination as? ItemDetailViewController
+            vc?.itemTitle = item.value(forKeyPath: "title") as? String
             vc?.delegate = self
         }
     }
@@ -81,7 +85,7 @@ class HomeViewController: UIViewController, ItemDetailViewControllerDelegate {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: homeItemDetailSegue, sender: nil)
+        performSegue(withIdentifier: homeItemDetailSegue, sender: indexPath)
     }
 }
 

@@ -24,6 +24,7 @@
 		52502C0A26D0A214008BA58D /* UserDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52502C0926D0A214008BA58D /* UserDTOTests.swift */; };
 		52502C1526D0A214008BA58D /* MobileClass2021v2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52502C1426D0A214008BA58D /* MobileClass2021v2UITests.swift */; };
 		5272A5BF26E6FDDB00868617 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272A5BE26E6FDDB00868617 /* ItemDetailViewController.swift */; };
+		52765D482705379500F8E1FF /* EmailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52765D472705379500F8E1FF /* EmailManager.swift */; };
 		5283218426F65B14009CE90D /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283218326F65B14009CE90D /* BookmarksViewController.swift */; };
 		5283218B26F678BF009CE90D /* BookmarksDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283218A26F678BF009CE90D /* BookmarksDTO.swift */; };
 		528321A826F7BA25009CE90D /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528321A726F7BA25009CE90D /* FilterViewController.swift */; };
@@ -73,6 +74,7 @@
 		52502C1426D0A214008BA58D /* MobileClass2021v2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileClass2021v2UITests.swift; sourceTree = "<group>"; };
 		52502C1626D0A214008BA58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5272A5BE26E6FDDB00868617 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		52765D472705379500F8E1FF /* EmailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailManager.swift; sourceTree = "<group>"; };
 		5283218326F65B14009CE90D /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		5283218A26F678BF009CE90D /* BookmarksDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksDTO.swift; sourceTree = "<group>"; };
 		528321A726F7BA25009CE90D /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 		528321A126F793BB009CE90D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				52765D472705379500F8E1FF /* EmailManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				528321A826F7BA25009CE90D /* FilterViewController.swift in Sources */,
 				522BBBE226ED421600B2EB83 /* UserDTO.swift in Sources */,
 				5283218B26F678BF009CE90D /* BookmarksDTO.swift in Sources */,
+				52765D482705379500F8E1FF /* EmailManager.swift in Sources */,
 				52451D4426E1C1A40084C1AE /* SettingsDetailsViewController.swift in Sources */,
 				520C522B26E05680000A9A5F /* SettingsViewController.swift in Sources */,
 			);
