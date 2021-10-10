@@ -1,33 +1,19 @@
-//
-//  BaseArchTests.swift
-//  BaseArchTests
-//
-//  Created by Jhoney Lopes on 09/10/21.
-//
+//  Copyright © 2017 Jhoney Lopes. All rights reserved.
 
 import XCTest
 @testable import BaseArch
 
 class BaseArchTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    var sut: GreetingViewController = GreetingViewController()
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    func test_DidTapButton_UpdateGreetingLabel() throws {
+        sut.person = PersonDTO(firstName: "FirstName", lastName: "LastName")
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+        sut.viewDidLoad()
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+        sut.showGreetingButton.sendActions(for: .touchUpInside)
 
+        XCTAssertTrue(sut.greetingLabel.text == "Hello FirstName LastName")
+    }
 }
