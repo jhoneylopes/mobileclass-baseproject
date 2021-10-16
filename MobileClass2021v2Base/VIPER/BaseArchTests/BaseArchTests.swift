@@ -6,14 +6,15 @@ import XCTest
 class BaseArchTests: XCTestCase {
 
     var sut: GreetingViewController = GreetingViewController()
-    let mockPresenter = GreetingPresenter()
-    let mockInteractor = GreetingInteractor()
+    let spyPresenter = GreetingPresenter()
+    let spyInteractor = GreetingInteractor()
 
     func test_DidTapButton_UpdateGreetingLabel() throws {
-        sut.eventHandler = mockPresenter
-        mockPresenter.view = sut
-        mockPresenter.greetingInteractor = mockInteractor
-        mockInteractor.output = mockPresenter
+        sut.eventHandler = spyPresenter
+        spyPresenter.view = sut
+
+        spyPresenter.greetingInteractor = spyInteractor
+        spyInteractor.output = spyPresenter
 
         sut.viewDidLoad()
 

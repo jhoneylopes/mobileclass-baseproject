@@ -11,7 +11,7 @@ class GreetingPresenter: GreetingOutput, GreetingViewEventHandler {
     }
 
     func receiveGreetingData(greetingData: GreetingData) {
-        let greeting = greetingData.greeting + " " + greetingData.subject
+        let greeting = greetingData.greeting + " " + greetingData.subject        
         self.view?.setGreeting(greeting: greeting)
     }
 }
