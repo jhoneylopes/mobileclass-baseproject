@@ -5,18 +5,18 @@ import XCTest
 
 class BaseArchTests: XCTestCase {
 
-    var sut: GreetingViewController = GreetingViewController()
+    var sut: HomeViewController = HomeViewController()
 
-    func test_DidTapButton_UpdateGreetingLabel() throws {
-        let spy: GreetingViewModel = GreetingViewModel(
+    func test_DidTapButton_UpdateHomeLabel() throws {
+        let spy: HomeViewModel = HomeViewModel(
             person: PersonDTO(firstName: "FirstName", lastName: "LastName")
         )
 
         sut.viewModel = spy
         sut.viewDidLoad()
 
-        sut.showGreetingButton.sendActions(for: .touchUpInside)
+        sut.showHomeButton.sendActions(for: .touchUpInside)
 
-        XCTAssertTrue(sut.greetingLabel.text == "Hello FirstName LastName")
+        XCTAssertTrue(sut.HomeLabel.text == "Hello FirstName LastName")
     }
 }
