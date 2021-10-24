@@ -3,7 +3,11 @@
 import Foundation
 
 //: ### Quando usar Reference Type
-class FooReference {
+class FooReference: Equatable {
+    static func == (lhs: FooReference, rhs: FooReference) -> Bool {
+        return lhs.name == rhs.name
+    }
+
     var name: String
 
     init(name: String) {
@@ -19,6 +23,11 @@ let obj2 = FooReference(name: "Foo1")
 if obj1 === obj2 {
     print("obj1 === obj2 :: Possuem a mesma referência!")
 }
+
+if obj1.self == obj2.self {
+    print("obj1 == obj2 :: Possuem a mesmos valores!")
+}
+
 
 if obj1 === obj1Copy {
     print("obj1 === obj1Copy :: Possuem a mesma referência!")

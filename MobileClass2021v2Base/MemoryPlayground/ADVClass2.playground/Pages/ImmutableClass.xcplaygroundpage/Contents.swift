@@ -18,5 +18,4 @@ final class ImmutableClass: CustomPlaygroundDisplayConvertible {
 
 let a = ImmutableClass(foo: "A", bar: "B")
 
-
 //: [Next](@next)

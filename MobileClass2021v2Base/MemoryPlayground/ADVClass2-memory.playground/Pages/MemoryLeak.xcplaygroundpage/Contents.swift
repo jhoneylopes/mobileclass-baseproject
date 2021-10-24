@@ -2,6 +2,10 @@
 
 import Foundation
 
+// Master
+// Table
+// Players
+
 final class Master {
     var name: String
     private(set) var tables: [Table] = []
@@ -18,7 +22,6 @@ final class Master {
 
     func addTable(_ table: Table) {
         self.tables.append(table)
-
     }
 
     func addPlayer(_ players: [Player]) {
@@ -28,7 +31,7 @@ final class Master {
 
 final class Table { // Tabletop RPG System
     var system: String
-    var master: Master?
+    weak var master: Master?
 
     init(_ system: String) {
         self.system = system
@@ -42,8 +45,8 @@ final class Table { // Tabletop RPG System
 
 final class Player {
     var name: String
-    var master: Master?
-    var table: Table?
+    unowned let master: Master
+    unowned let table: Table
 
     init(_ name: String, _ master: Master, _ table: Table) {
         self.name = name
@@ -58,10 +61,10 @@ final class Player {
 }
 
 do {
-    let master = Master("Jhoney")
-    let table = Table("D&D 3ª Edição")
+    let master =  Master("Jhoney Lopes")
+    let table =   Table("D&D 3ª Edição")
     let player1 = Player("Player1", master, table)
-    let player2 = Player("Player1", master, table)
+    let player2 = Player("Player2", master, table)
 
     master.addTable(table)
     master.addPlayer([player1, player2])

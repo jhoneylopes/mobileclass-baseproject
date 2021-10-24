@@ -4,29 +4,31 @@ import UIKit
 
 final class Class1 {
     var didFinish: ((String) -> Void)?
-    var foo: String?
 
     init(foo: String) {
         self.foo = foo
-
         bind()
     }
 
+    var foo: String?
+
     func bind() {
-        didFinish = { _ in
-            print("DidFinish \(self.foo)")
+
+        didFinish = { [weak self] _ in
+
+            print("🟢 DidFinish \(self?.foo)")
         }
     }
 
     deinit {
-        print("deinit Class1")
+        print("🔴 deinit Class1")
     }
 }
 
 do {
-    let memory = Class1(foo: "Foo")
+    var memory: Class1? = Class1(foo: "Foo")
 
-    memory.didFinish?("Bar")
+    memory?.didFinish?("Bar")
 }
 
 //: [Next](@next)

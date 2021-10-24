@@ -5,6 +5,7 @@ import Foundation
 //: # Value Type e Reference Type
 
 //: Value type example
+// enum, tuplas (Int, Int)
 struct S {
     var data: Int = -1
 }
@@ -12,6 +13,7 @@ var a = S()
 var b = a                        // a é copiado para b
 a.data = 42                      // Altera a, porém não b
 print("\(a.data), \(b.data)")    // print "42, -1"
+
 
 //: Reference type example
 class C {

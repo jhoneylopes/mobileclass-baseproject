@@ -24,10 +24,14 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         title = "Home"
 
-        viewModel = HomeViewModel()
+        viewModel = HomeViewModel(
+            api: DependencyManager.resolve(MovieService.self)
+        )
 
         tableView.delegate = self
         tableView.dataSource = self
+
+        viewModel.didGetMovies()
     }
 
     // MARK: Coordinator

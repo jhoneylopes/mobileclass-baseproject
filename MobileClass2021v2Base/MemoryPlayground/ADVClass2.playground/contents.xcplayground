@@ -7,5 +7,6 @@
         <page name='WhenToUseValueType'/>
         <page name='WhenToUseReferenceType'/>
         <page name='UIExample'/>
+        <page name='LiveClass'/>
     </pages>
 </playground>
