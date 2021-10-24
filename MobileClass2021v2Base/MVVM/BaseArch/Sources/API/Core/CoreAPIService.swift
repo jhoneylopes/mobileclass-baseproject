@@ -2,7 +2,10 @@ import Foundation
 
 private let defaultBaseURL: URL = URL(string: "https://api.themoviedb.org")!
 
+
 class CoreAPIService {
+    static var defaultImageURL: String = "https://image.tmdb.org/t/p/w500"
+
     let networking: Networking
     let baseURL: URL
 

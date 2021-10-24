@@ -32,6 +32,8 @@ class HomeViewController: UIViewController {
         tableView.dataSource = self
 
         viewModel.didGetMovies()
+
+
     }
 
     // MARK: Coordinator
@@ -39,6 +41,8 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == viewModel.homeDetailsIdentifier {
             // Aqui vamos adicionar o item que será parte do detalhes
+            let vc = segue.destination as? HomeDetailsViewController
+            vc?.movieID = "155" // TODO: ID temporário
         }
     }
 }
