@@ -156,7 +156,6 @@
 				5236D24A271A765200EA5588 /* BaseArchTests */,
 				5236D255271A765200EA5588 /* BaseArchUITests */,
 				5236D232271A764D00EA5588 /* Products */,
-				528CFE1627259B61006BA86A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -229,13 +228,6 @@
 				527F25E02725E10000C30E24 /* MovieDetailDTO.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		528CFE1627259B61006BA86A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		52A23310271CF347003C4221 /* Home */ = {
@@ -327,8 +319,6 @@
 			dependencies = (
 			);
 			name = BaseArch;
-			packageProductDependencies = (
-			);
 			productName = BaseArch;
 			productReference = 5236D231271A764D00EA5588 /* BaseArch.app */;
 			productType = "com.apple.product-type.application";
@@ -400,8 +390,6 @@
 				Base,
 			);
 			mainGroup = 5236D228271A764D00EA5588;
-			packageReferences = (
-			);
 			productRefGroup = 5236D232271A764D00EA5588 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

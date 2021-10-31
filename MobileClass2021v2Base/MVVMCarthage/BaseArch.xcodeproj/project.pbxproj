@@ -72,8 +72,10 @@
 		528CFE0C2724D729006BA86A /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
 		528CFE0E2724D7E0006BA86A /* DependencyInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjector.swift; sourceTree = "<group>"; };
 		528CFE1427259A8E006BA86A /* HomeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailsViewController.swift; sourceTree = "<group>"; };
+		529CC053272F0061000A9992 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		52A2330C271CD56E003C4221 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		52AAE5F5271C709100378CCD /* MVVMP.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MVVMP.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		52D0A92E272F0E55005D3430 /* Alamofire.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Alamofire.xcframework; path = Carthage/Build/Alamofire.xcframework; sourceTree = "<group>"; };
 		52DCC4EA271E43C800E3EC40 /* MoviesDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesDTO.swift; sourceTree = "<group>"; };
 		52DCC4ED271E43C900E3EC40 /* MovieService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		52DCC4F0271E43CA00E3EC40 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -234,6 +236,8 @@
 		528CFE1627259B61006BA86A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52D0A92E272F0E55005D3430 /* Alamofire.xcframework */,
+				529CC053272F0061000A9992 /* Alamofire.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -640,6 +644,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LB7D339DT6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = BaseArch/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -649,6 +657,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Debug;
 		};
@@ -659,6 +668,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LB7D339DT6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = BaseArch/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -668,6 +681,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Release;
 		};
