@@ -3,7 +3,7 @@
 import UIKit
 
 /// L — Liskov Substitution
-///     If S is a subtype of T, then objects of type T in a program may be replaced with objects of type S without altering any of the desirable properties of that program. Ele foi definido por Bárbara Liskov sendo a definição matemática original: "Se para cada objeto o1 do tipo S existe um objeto o2 do tipo T, de modo que para todos os programas P definidos em termos de T, o comportamento de P permanece inalterado quando o1 é substituído por o2, então S é um subtipo de T.
+/// Ele foi definido por Bárbara Liskov sendo a definição matemática original: "Se para cada objeto o1 do tipo S existe um objeto o2 do tipo T, de modo que para todos os programas P definidos em termos de T, o comportamento de P permanece inalterado quando o1 é substituído por o2, então S é um subtipo de T.
 
 // O clássico exemplo das figuras geométricas
 
