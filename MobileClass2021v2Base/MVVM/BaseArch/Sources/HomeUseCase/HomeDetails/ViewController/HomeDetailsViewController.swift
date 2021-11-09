@@ -28,6 +28,8 @@ final class HomeDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.accessibilityIdentifier = "HomeDetailView"
+
         titleLabel.setInjection(objInject: backgroundColor)
         titleLabel.updateSampleLabel()
 

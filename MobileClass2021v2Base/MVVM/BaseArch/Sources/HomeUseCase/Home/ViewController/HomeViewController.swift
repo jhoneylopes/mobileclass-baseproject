@@ -30,6 +30,7 @@ class HomeViewController: UIViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.accessibilityIdentifier = "HomeTableView"
 
         viewModel.didGetMovies()
 
@@ -66,7 +67,7 @@ extension HomeViewController: UITableViewDataSource {
         numberOfRowsInSection section: Int
     ) -> Int {
 
-        return 1
+        return 3
     }
 
 
@@ -77,6 +78,8 @@ extension HomeViewController: UITableViewDataSource {
 
         let cell = UITableViewCell()
         cell.backgroundColor = .orange
+        cell.isAccessibilityElement = true
+        cell.accessibilityIdentifier = "HomeCell_\(indexPath.row)"
 
         return cell
     }

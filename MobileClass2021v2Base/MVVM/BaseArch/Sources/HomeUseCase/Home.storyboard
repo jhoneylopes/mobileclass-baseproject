@@ -11,7 +11,7 @@
         <!--Home View Controller-->
         <scene sceneID="pxh-oP-s8X">
             <objects>
-                <viewController id="Ra1-gP-ss7" customClass="HomeViewController" customModule="BaseArch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="Ra1-gP-ss7" customClass="HomeViewController" customModule="BaseArch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AnK-YT-bIM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
