@@ -1,11 +1,11 @@
 import Foundation
-//import Alamofire
+import Alamofire
 
 protocol MovieService {
 
     func getMoviesTopRated(page: Int, completion: @escaping (Result<MoviesDTO, APIError>) -> Void)
-//    func getMovieBy(id: String, completion: @escaping (Result<MovieDetailDTO, AFError>) -> Void)
-//    func downloadImage(imagePath: String, completion: @escaping (Result<URL, AFError>) -> Void)
+    func getMovieBy(id: String, completion: @escaping (Result<MovieDetailDTO, AFError>) -> Void)
+    func downloadImage(imagePath: String, completion: @escaping (Result<URL, AFError>) -> Void)
 }
 
 final class LiveMovieService: CoreAPIService, MovieService {
@@ -24,26 +24,26 @@ final class LiveMovieService: CoreAPIService, MovieService {
         perform(request: request, completion: completion)
     }
 
-//    func getMovieBy(
-//        id: String,
-//        completion: @escaping (Result<MovieDetailDTO, AFError>) -> Void
-//    ) {
-//        let request = makeRequest(
-//            path: "/3/movie/" + id,
-//            httpMethod: HTTPMethod.GET.rawValue
-//        )
-//
-//        AF.request(request).responseDecodable(completionHandler: { response in
-//            completion(response.result)
-//        })
-//    }
-//
-//    func downloadImage(
-//        imagePath: String,
-//        completion: @escaping (Result<URL, AFError>) -> Void
-//    ) {
-//        AF.download(imagePath).responseURL { response in
-//            completion(response.result)
-//        }
-//    }
+    func getMovieBy(
+        id: String,
+        completion: @escaping (Result<MovieDetailDTO, AFError>) -> Void
+    ) {
+        let request = makeRequest(
+            path: "/3/movie/" + id,
+            httpMethod: HTTPMethod.GET.rawValue
+        )
+
+        AF.request(request).responseDecodable(completionHandler: { response in
+            completion(response.result)
+        })
+    }
+
+    func downloadImage(
+        imagePath: String,
+        completion: @escaping (Result<URL, AFError>) -> Void
+    ) {
+        AF.download(imagePath).responseURL { response in
+            completion(response.result)
+        }
+    }
 }

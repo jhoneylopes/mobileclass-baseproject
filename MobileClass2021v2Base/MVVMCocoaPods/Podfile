@@ -6,6 +6,7 @@ target 'BaseArch' do
   use_frameworks!
 
   # Pods for BaseArch
+  pod 'Alamofire', '~> 5.4'
 
   target 'BaseArchTests' do
     inherit! :search_paths

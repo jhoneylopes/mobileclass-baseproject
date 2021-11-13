@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,8 @@
 		528CFE0F2724D7E0006BA86A /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CFE0E2724D7E0006BA86A /* DependencyInjector.swift */; };
 		528CFE1527259A8E006BA86A /* HomeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528CFE1427259A8E006BA86A /* HomeDetailsViewController.swift */; };
 		52A2330D271CD56E003C4221 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52A2330C271CD56E003C4221 /* Home.storyboard */; };
+		52B48DD7273B39850041728C /* Alamofire.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D0A92E272F0E55005D3430 /* Alamofire.xcframework */; };
+		52B48DD8273B39850041728C /* Alamofire.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52D0A92E272F0E55005D3430 /* Alamofire.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		52DCC4F4271E43CA00E3EC40 /* MoviesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCC4EA271E43C800E3EC40 /* MoviesDTO.swift */; };
 		52DCC4F6271E43CA00E3EC40 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCC4ED271E43C900E3EC40 /* MovieService.swift */; };
 		52DCC4F8271E43CA00E3EC40 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCC4F0271E43CA00E3EC40 /* APIError.swift */; };
@@ -48,6 +50,20 @@
 			remoteInfo = BaseArch;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		52B48DD9273B39850041728C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				52B48DD8273B39850041728C /* Alamofire.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5221635C271A7761008B7F3D /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -89,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B48DD7273B39850041728C /* Alamofire.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +342,7 @@
 				5236D22D271A764D00EA5588 /* Sources */,
 				5236D22E271A764D00EA5588 /* Frameworks */,
 				5236D22F271A764D00EA5588 /* Resources */,
+				52B48DD9273B39850041728C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

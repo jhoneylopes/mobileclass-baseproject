@@ -1,6 +1,7 @@
 //  Copyright © 2017 Jhoney Lopes. All rights reserved.
 
 import Foundation
+import Logger
 
 protocol HomeDetailViewModelProtocol: AnyObject {
     var api: MovieService { get set }
@@ -41,9 +42,11 @@ class HomeDetailViewModel: HomeDetailViewModelProtocol {
         api.downloadImage(imagePath: path) { [weak self] result in
             switch result {
             case .success(let imageURL):
-                self?.didUpdateImageView?(imageURL)                
+                self?.didUpdateImageView?(imageURL)
+                Logger.log("URL: \(imageURL)")
             case .failure(let error):
                 print(error)
+                Logger.log("error")
             }
 
         }

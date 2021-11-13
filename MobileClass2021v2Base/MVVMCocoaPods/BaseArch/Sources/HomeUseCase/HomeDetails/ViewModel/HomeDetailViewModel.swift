@@ -23,29 +23,29 @@ class HomeDetailViewModel: HomeDetailViewModelProtocol {
 
     func didGetMovieDetail(id: String) {
 
-//        api.getMovieBy(id: id) { [weak self] result in
-//            switch result {
-//            case .success(let data):
-//                self?.didUpdateView?(data)
-//                self?.didDownloadImage(
-//                    for: CoreAPIService.defaultImageURL + (data.poster_path ?? "")
-//                )
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
+        api.getMovieBy(id: id) { [weak self] result in
+            switch result {
+            case .success(let data):
+                self?.didUpdateView?(data)
+                self?.didDownloadImage(
+                    for: CoreAPIService.defaultImageURL + (data.poster_path ?? "")
+                )
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
     func didDownloadImage(for path: String) {
 
-//        api.downloadImage(imagePath: path) { [weak self] result in
-//            switch result {
-//            case .success(let imageURL):
-//                self?.didUpdateImageView?(imageURL)                
-//            case .failure(let error):
-//                print(error)
-//            }
-//
-//        }
+        api.downloadImage(imagePath: path) { [weak self] result in
+            switch result {
+            case .success(let imageURL):
+                self?.didUpdateImageView?(imageURL)                
+            case .failure(let error):
+                print(error)
+            }
+
+        }
     }
 }

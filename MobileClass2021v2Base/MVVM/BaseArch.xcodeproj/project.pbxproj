@@ -16,7 +16,6 @@
 		5236D241271A765200EA5588 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5236D23F271A765200EA5588 /* LaunchScreen.storyboard */; };
 		5236D257271A765200EA5588 /* BaseArchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5236D256271A765200EA5588 /* BaseArchUITests.swift */; };
 		524CB48F2720F9A100B9CD5C /* Curl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CB48E2720F9A100B9CD5C /* Curl.swift */; };
-		527F25DF2725CFA700C30E24 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 527F25DE2725CFA700C30E24 /* Alamofire */; };
 		527F25E12725E10000C30E24 /* MovieDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F25E02725E10000C30E24 /* MovieDetailDTO.swift */; };
 		527F25E32725EF9B00C30E24 /* HomeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F25E22725EF9B00C30E24 /* HomeDetailViewModel.swift */; };
 		52824294271B311A004A7223 /* BaseArchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52824293271B311A004A7223 /* BaseArchTests.swift */; };
@@ -27,6 +26,8 @@
 		528CFE1827259B61006BA86A /* SampleDependency in Frameworks */ = {isa = PBXBuildFile; productRef = 528CFE1727259B61006BA86A /* SampleDependency */; };
 		528CFE1B2725A252006BA86A /* BackgroundColor in Frameworks */ = {isa = PBXBuildFile; productRef = 528CFE1A2725A252006BA86A /* BackgroundColor */; };
 		52A2330D271CD56E003C4221 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52A2330C271CD56E003C4221 /* Home.storyboard */; };
+		52B48DDD273B41660041728C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 52B48DDC273B41660041728C /* Alamofire */; };
+		52B48DE0273B43FC0041728C /* Logger in Frameworks */ = {isa = PBXBuildFile; productRef = 52B48DDF273B43FC0041728C /* Logger */; };
 		52DCC4F4271E43CA00E3EC40 /* MoviesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCC4EA271E43C800E3EC40 /* MoviesDTO.swift */; };
 		52DCC4F6271E43CA00E3EC40 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCC4ED271E43C900E3EC40 /* MovieService.swift */; };
 		52DCC4F8271E43CA00E3EC40 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCC4F0271E43CA00E3EC40 /* APIError.swift */; };
@@ -79,6 +80,7 @@
 		528CFE192725A245006BA86A /* BackgroundColor */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BackgroundColor; sourceTree = "<group>"; };
 		52A2330C271CD56E003C4221 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		52AAE5F5271C709100378CCD /* MVVMP.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MVVMP.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		52B48DDE273B43A20041728C /* Logger */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Logger; sourceTree = "<group>"; };
 		52DCC4EA271E43C800E3EC40 /* MoviesDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesDTO.swift; sourceTree = "<group>"; };
 		52DCC4ED271E43C900E3EC40 /* MovieService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		52DCC4F0271E43CA00E3EC40 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -92,8 +94,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				527F25DF2725CFA700C30E24 /* Alamofire in Frameworks */,
+				52B48DDD273B41660041728C /* Alamofire in Frameworks */,
 				528CFE1B2725A252006BA86A /* BackgroundColor in Frameworks */,
+				52B48DE0273B43FC0041728C /* Logger in Frameworks */,
 				528CFE1827259B61006BA86A /* SampleDependency in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +162,7 @@
 		5236D228271A764D00EA5588 = {
 			isa = PBXGroup;
 			children = (
+				52B48DDE273B43A20041728C /* Logger */,
 				528CFE192725A245006BA86A /* BackgroundColor */,
 				528CFE102724E2BA006BA86A /* SampleDependency */,
 				52AAE5F5271C709100378CCD /* MVVMP.playground */,
@@ -340,7 +344,8 @@
 			packageProductDependencies = (
 				528CFE1727259B61006BA86A /* SampleDependency */,
 				528CFE1A2725A252006BA86A /* BackgroundColor */,
-				527F25DE2725CFA700C30E24 /* Alamofire */,
+				52B48DDC273B41660041728C /* Alamofire */,
+				52B48DDF273B43FC0041728C /* Logger */,
 			);
 			productName = BaseArch;
 			productReference = 5236D231271A764D00EA5588 /* BaseArch.app */;
@@ -414,7 +419,7 @@
 			);
 			mainGroup = 5236D228271A764D00EA5588;
 			packageReferences = (
-				527F25DD2725CFA700C30E24 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				52B48DDB273B41660041728C /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 5236D232271A764D00EA5588 /* Products */;
 			projectDirPath = "";
@@ -811,7 +816,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		527F25DD2725CFA700C30E24 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		52B48DDB273B41660041728C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -822,11 +827,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		527F25DE2725CFA700C30E24 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 527F25DD2725CFA700C30E24 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
 		528CFE1727259B61006BA86A /* SampleDependency */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SampleDependency;
@@ -834,6 +834,15 @@
 		528CFE1A2725A252006BA86A /* BackgroundColor */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BackgroundColor;
+		};
+		52B48DDC273B41660041728C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52B48DDB273B41660041728C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		52B48DDF273B43FC0041728C /* Logger */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Logger;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
