@@ -20,3 +20,4 @@ final class HomeTestCase: BaseTestCase {
             .assertHomeDetailViewDisplayed()
     }
 }
+

@@ -34,6 +34,12 @@
 		5291CFFA2736A1ED008C99BE /* HomeRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291CFF92736A1ED008C99BE /* HomeRobot.swift */; };
 		5291CFFC2736CB35008C99BE /* HomeTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291CFFB2736CB35008C99BE /* HomeTestCase.swift */; };
 		5291CFFF2736CDAB008C99BE /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291CFFE2736CDAB008C99BE /* BaseTestCase.swift */; };
+		52A09889274190280054E447 /* HomeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A09888274190280054E447 /* HomeServiceTests.swift */; };
+		52A0988B274190450054E447 /* HomeSmokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0988A274190450054E447 /* HomeSmokeTests.swift */; };
+		52A0988D27419D600054E447 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0988C27419D600054E447 /* main.swift */; };
+		52A0988F27419DA10054E447 /* FakeAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0988E27419DA10054E447 /* FakeAppDelegate.swift */; };
+		52A0989127419DE10054E447 /* FakeDependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0989027419DE10054E447 /* FakeDependencyInjector.swift */; };
+		52A098932741AE8D0054E447 /* TestDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A098922741AE8D0054E447 /* TestDouble.swift */; };
 		52A2330D271CD56E003C4221 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52A2330C271CD56E003C4221 /* Home.storyboard */; };
 		52DCC4F4271E43CA00E3EC40 /* MoviesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCC4EA271E43C800E3EC40 /* MoviesDTO.swift */; };
 		52DCC4F6271E43CA00E3EC40 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCC4ED271E43C900E3EC40 /* MovieService.swift */; };
@@ -92,6 +98,12 @@
 		5291CFF92736A1ED008C99BE /* HomeRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRobot.swift; sourceTree = "<group>"; };
 		5291CFFB2736CB35008C99BE /* HomeTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTestCase.swift; sourceTree = "<group>"; };
 		5291CFFE2736CDAB008C99BE /* BaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
+		52A09888274190280054E447 /* HomeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceTests.swift; sourceTree = "<group>"; };
+		52A0988A274190450054E447 /* HomeSmokeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSmokeTests.swift; sourceTree = "<group>"; };
+		52A0988C27419D600054E447 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		52A0988E27419DA10054E447 /* FakeAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAppDelegate.swift; sourceTree = "<group>"; };
+		52A0989027419DE10054E447 /* FakeDependencyInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDependencyInjector.swift; sourceTree = "<group>"; };
+		52A098922741AE8D0054E447 /* TestDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDouble.swift; sourceTree = "<group>"; };
 		52A2330C271CD56E003C4221 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		52AAE5F5271C709100378CCD /* MVVMP.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MVVMP.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		52DCC4EA271E43C800E3EC40 /* MoviesDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesDTO.swift; sourceTree = "<group>"; };
@@ -135,6 +147,7 @@
 			children = (
 				5236D234271A764D00EA5588 /* AppDelegate.swift */,
 				5236D236271A764D00EA5588 /* SceneDelegate.swift */,
+				52A0988C27419D600054E447 /* main.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -239,6 +252,9 @@
 			isa = PBXGroup;
 			children = (
 				524539C72738770E00559D48 /* CoreTests.swift */,
+				52A0988E27419DA10054E447 /* FakeAppDelegate.swift */,
+				52A0989027419DE10054E447 /* FakeDependencyInjector.swift */,
+				52A098922741AE8D0054E447 /* TestDouble.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -262,6 +278,7 @@
 		5268619727372D0C003DACBD /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				52A0988727418FB60054E447 /* Service */,
 				524539BE273870F700559D48 /* Model */,
 				524539C92738819800559D48 /* ViewController */,
 				524539CA273881A600559D48 /* ViewModel */,
@@ -324,6 +341,15 @@
 				5291CFFE2736CDAB008C99BE /* BaseTestCase.swift */,
 			);
 			path = BaseRobot;
+			sourceTree = "<group>";
+		};
+		52A0988727418FB60054E447 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				52A09888274190280054E447 /* HomeServiceTests.swift */,
+				52A0988A274190450054E447 /* HomeSmokeTests.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		52A23310271CF347003C4221 /* Home */ = {
@@ -543,6 +569,7 @@
 			files = (
 				527F25E12725E10000C30E24 /* MovieDetailDTO.swift in Sources */,
 				5236D235271A764D00EA5588 /* AppDelegate.swift in Sources */,
+				52A0988D27419D600054E447 /* main.swift in Sources */,
 				52DCC4F9271E43CA00E3EC40 /* Networking.swift in Sources */,
 				5221635D271A7761008B7F3D /* HomeViewModel.swift in Sources */,
 				52DCC4F4271E43CA00E3EC40 /* MoviesDTO.swift in Sources */,
@@ -564,10 +591,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A09889274190280054E447 /* HomeServiceTests.swift in Sources */,
 				52824294271B311A004A7223 /* BaseArchTests.swift in Sources */,
 				524539C82738770E00559D48 /* CoreTests.swift in Sources */,
+				52A0988F27419DA10054E447 /* FakeAppDelegate.swift in Sources */,
+				52A098932741AE8D0054E447 /* TestDouble.swift in Sources */,
 				5268619927372D88003DACBD /* HomeViewControllerTests.swift in Sources */,
+				52A0989127419DE10054E447 /* FakeDependencyInjector.swift in Sources */,
 				524539C02738710B00559D48 /* MoviesTests.swift in Sources */,
+				52A0988B274190450054E447 /* HomeSmokeTests.swift in Sources */,
 				5268619B27372D96003DACBD /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

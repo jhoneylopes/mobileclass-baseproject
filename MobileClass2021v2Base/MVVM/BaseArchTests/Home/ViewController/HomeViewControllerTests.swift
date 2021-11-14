@@ -33,7 +33,3 @@ class HomeViewControllerTests: XCTestCase {
 
 
 }
-
-final class HomeViewModel: HomeViewModelProtocol {
-
-}

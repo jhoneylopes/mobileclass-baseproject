@@ -22,6 +22,14 @@ class BaseArchTests: XCTestCase { // Fazemos a nossa classe sub-classe de XCTest
 
         XCTAssertEqual(numberOfVowels, 3, "Deveria achar 3 vogais em Foo Bar")
     }
+
+    // To refactor!
+//    func test_NumberOfVowels_WhenPassedFOO_ReturnsTwo() {
+//        let string = "FOO"
+//        let numberOfVowels = TestBase.numberOfVowels(in: string)
+//
+//        XCTAssertEqual(numberOfVowels, 2, "Deveria achar 2 vogais em FOO")
+//    }
 }
 
 // Exemplo de uma Classe e TestCase.

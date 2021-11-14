@@ -77,7 +77,7 @@ class CoreAPIService {
 
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod
-        print(request.cURL())
+        // print(request.cURL())
         return request
     }
 }
