@@ -11,4 +11,3 @@ class FakeAppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-

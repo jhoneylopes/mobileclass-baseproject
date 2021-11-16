@@ -34,6 +34,8 @@
 		5291CFFA2736A1ED008C99BE /* HomeRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291CFF92736A1ED008C99BE /* HomeRobot.swift */; };
 		5291CFFC2736CB35008C99BE /* HomeTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291CFFB2736CB35008C99BE /* HomeTestCase.swift */; };
 		5291CFFF2736CDAB008C99BE /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291CFFE2736CDAB008C99BE /* BaseTestCase.swift */; };
+		5297C6DF274332AC00FF2F7C /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5297C6DE274332AC00FF2F7C /* FavoritesViewController.swift */; };
+		5297C6E2274332D500FF2F7C /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5297C6E1274332D500FF2F7C /* FavoritesViewModel.swift */; };
 		52A09889274190280054E447 /* HomeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A09888274190280054E447 /* HomeServiceTests.swift */; };
 		52A0988B274190450054E447 /* HomeSmokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0988A274190450054E447 /* HomeSmokeTests.swift */; };
 		52A0988D27419D600054E447 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0988C27419D600054E447 /* main.swift */; };
@@ -98,6 +100,8 @@
 		5291CFF92736A1ED008C99BE /* HomeRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRobot.swift; sourceTree = "<group>"; };
 		5291CFFB2736CB35008C99BE /* HomeTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTestCase.swift; sourceTree = "<group>"; };
 		5291CFFE2736CDAB008C99BE /* BaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
+		5297C6DE274332AC00FF2F7C /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		5297C6E1274332D500FF2F7C /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		52A09888274190280054E447 /* HomeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceTests.swift; sourceTree = "<group>"; };
 		52A0988A274190450054E447 /* HomeSmokeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSmokeTests.swift; sourceTree = "<group>"; };
 		52A0988C27419D600054E447 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				52DCC4E8271E43AB00E3EC40 /* API */,
+				5297C6DC2743327F00FF2F7C /* FavoritesUseCase */,
 				5221635B271A7750008B7F3D /* HomeUseCase */,
 			);
 			path = Sources;
@@ -341,6 +346,31 @@
 				5291CFFE2736CDAB008C99BE /* BaseTestCase.swift */,
 			);
 			path = BaseRobot;
+			sourceTree = "<group>";
+		};
+		5297C6DC2743327F00FF2F7C /* FavoritesUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				5297C6E0274332C800FF2F7C /* ViewModel */,
+				5297C6DD2743329C00FF2F7C /* ViewController */,
+			);
+			path = FavoritesUseCase;
+			sourceTree = "<group>";
+		};
+		5297C6DD2743329C00FF2F7C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5297C6DE274332AC00FF2F7C /* FavoritesViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5297C6E0274332C800FF2F7C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5297C6E1274332D500FF2F7C /* FavoritesViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		52A0988727418FB60054E447 /* Service */ = {
@@ -577,6 +607,8 @@
 				52DCC4F8271E43CA00E3EC40 /* APIError.swift in Sources */,
 				528CFE1527259A8E006BA86A /* HomeDetailsViewController.swift in Sources */,
 				5236D237271A764D00EA5588 /* SceneDelegate.swift in Sources */,
+				5297C6DF274332AC00FF2F7C /* FavoritesViewController.swift in Sources */,
+				5297C6E2274332D500FF2F7C /* FavoritesViewModel.swift in Sources */,
 				52DCC4F6271E43CA00E3EC40 /* MovieService.swift in Sources */,
 				524CB48F2720F9A100B9CD5C /* Curl.swift in Sources */,
 				528CFE0F2724D7E0006BA86A /* DependencyInjector.swift in Sources */,

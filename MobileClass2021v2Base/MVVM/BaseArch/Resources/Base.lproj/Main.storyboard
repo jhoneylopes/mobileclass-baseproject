@@ -8,21 +8,94 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 1-->
+        <!--Favorites View Controller-->
         <scene sceneID="1a5-q3-Thb">
             <objects>
-                <viewController id="EwI-6U-yQ1" sceneMemberID="viewController">
+                <viewController id="EwI-6U-yQ1" customClass="FavoritesViewController" customModule="BaseArch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GjJ-ji-f9g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UXa-iZ-gps">
+                                <rect key="frame" x="16" y="99" width="382" height="250"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAR-vD-iat">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="43.5"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="didTapAnimateButton:" destination="EwI-6U-yQ1" eventType="touchUpInside" id="y9D-J4-Ou8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huy-O7-F1n">
+                                        <rect key="frame" x="0.0" y="51.5" width="382" height="43.5"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="didTapAnimateButton:" destination="EwI-6U-yQ1" eventType="touchUpInside" id="cu8-0M-Ga7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jss-ix-35I">
+                                        <rect key="frame" x="0.0" y="103" width="382" height="44"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="didTapAnimateButton:" destination="EwI-6U-yQ1" eventType="touchUpInside" id="06V-PY-9aE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpd-J5-GJx">
+                                        <rect key="frame" x="0.0" y="155" width="382" height="43.5"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="didTapAnimateButton:" destination="EwI-6U-yQ1" eventType="touchUpInside" id="lGO-Ei-WrV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTK-h9-XBY">
+                                        <rect key="frame" x="0.0" y="206.5" width="382" height="43.5"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="didTapAnimateButton:" destination="EwI-6U-yQ1" eventType="touchUpInside" id="t2n-nF-Psj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="gis-cK-tKx"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x7O-Lt-Tme">
+                                <rect key="frame" x="144.5" y="404" width="125" height="125"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="U15-nZ-g8j"/>
+                                    <constraint firstAttribute="width" constant="125" id="u5Y-9M-K8K"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="OqI-Zn-juK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x7O-Lt-Tme" firstAttribute="centerX" secondItem="GjJ-ji-f9g" secondAttribute="centerX" id="Jn6-ry-1z9"/>
+                            <constraint firstItem="OqI-Zn-juK" firstAttribute="trailing" secondItem="UXa-iZ-gps" secondAttribute="trailing" constant="16" id="Obo-Rb-RGv"/>
+                            <constraint firstItem="x7O-Lt-Tme" firstAttribute="top" secondItem="UXa-iZ-gps" secondAttribute="bottom" constant="55" id="fUy-Pd-Ist"/>
+                            <constraint firstItem="UXa-iZ-gps" firstAttribute="top" secondItem="OqI-Zn-juK" secondAttribute="top" constant="55" id="x9X-dt-s3b"/>
+                            <constraint firstItem="UXa-iZ-gps" firstAttribute="leading" secondItem="OqI-Zn-juK" secondAttribute="leading" constant="16" id="xrE-4b-E3x"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Su2-8J-h71"/>
+                    <tabBarItem key="tabBarItem" title="" systemItem="favorites" id="Su2-8J-h71"/>
+                    <connections>
+                        <outlet property="viewCard" destination="x7O-Lt-Tme" id="tQw-e0-qb9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFZ-tT-kXB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-91" y="-778"/>
+            <point key="canvasLocation" x="-91.304347826086968" y="-778.125"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3mB-HW-Q5m">
@@ -57,6 +130,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
