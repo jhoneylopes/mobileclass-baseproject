@@ -5,7 +5,7 @@ import XCTest
 
 class HomeViewControllerTests: XCTestCase {
 
-    var sut: HomeViewController!
+    var sut: HomeViewController! // System Under Test
 
     override func setUp() {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
@@ -15,9 +15,9 @@ class HomeViewControllerTests: XCTestCase {
         sut = viewController as? HomeViewController
     }
 
-
     func test_TableView_AfterViewDidLoad_IsNotNil() {
         sut.loadViewIfNeeded()
+
         XCTAssertNotNil(sut.tableView)
     }
 
@@ -30,6 +30,4 @@ class HomeViewControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 3)
     }
-
-
 }

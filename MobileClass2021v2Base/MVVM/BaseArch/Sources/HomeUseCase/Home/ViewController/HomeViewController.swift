@@ -67,7 +67,7 @@ extension HomeViewController: UITableViewDataSource {
         numberOfRowsInSection section: Int
     ) -> Int {
 
-        return 3
+        return 0
     }
 
 

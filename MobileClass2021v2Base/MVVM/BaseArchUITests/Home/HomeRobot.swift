@@ -11,6 +11,10 @@
 
 import XCTest
 
+// Page/Identifer
+// Action
+// Asserts
+
 // MARK: Page
 enum HomePage {
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5221635D271A7761008B7F3D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221635C271A7761008B7F3D /* HomeViewModel.swift */; };
 		5221635F271A7768008B7F3D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221635E271A7768008B7F3D /* HomeViewController.swift */; };
+		5224F2E62744688E00B21726 /* ClassExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5224F2E52744688E00B21726 /* ClassExampleTests.swift */; };
 		5236D235271A764D00EA5588 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5236D234271A764D00EA5588 /* AppDelegate.swift */; };
 		5236D237271A764D00EA5588 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5236D236271A764D00EA5588 /* SceneDelegate.swift */; };
 		5236D23C271A764D00EA5588 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5236D23A271A764D00EA5588 /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 /* Begin PBXFileReference section */
 		5221635C271A7761008B7F3D /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5221635E271A7768008B7F3D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5224F2E52744688E00B21726 /* ClassExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassExampleTests.swift; sourceTree = "<group>"; };
 		5236D231271A764D00EA5588 /* BaseArch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseArch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5236D234271A764D00EA5588 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5236D236271A764D00EA5588 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			children = (
 				524539C4273875E100559D48 /* Base */,
 				52824293271B311A004A7223 /* BaseArchTests.swift */,
+				5224F2E52744688E00B21726 /* ClassExampleTests.swift */,
 				5268619727372D0C003DACBD /* Home */,
 				5236D24D271A765200EA5588 /* Info.plist */,
 			);
@@ -593,6 +596,7 @@
 			files = (
 				52A09889274190280054E447 /* HomeServiceTests.swift in Sources */,
 				52824294271B311A004A7223 /* BaseArchTests.swift in Sources */,
+				5224F2E62744688E00B21726 /* ClassExampleTests.swift in Sources */,
 				524539C82738770E00559D48 /* CoreTests.swift in Sources */,
 				52A0988F27419DA10054E447 /* FakeAppDelegate.swift in Sources */,
 				52A098932741AE8D0054E447 /* TestDouble.swift in Sources */,
