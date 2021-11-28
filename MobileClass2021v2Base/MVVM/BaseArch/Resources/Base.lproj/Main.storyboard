@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Favorites View Controller-->
+        <!--Animations-->
         <scene sceneID="1a5-q3-Thb">
             <objects>
                 <viewController id="EwI-6U-yQ1" customClass="FavoritesViewController" customModule="BaseArch" customModuleProvider="target" sceneMemberID="viewController">
@@ -88,14 +88,107 @@
                             <constraint firstItem="UXa-iZ-gps" firstAttribute="leading" secondItem="OqI-Zn-juK" secondAttribute="leading" constant="16" id="xrE-4b-E3x"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" systemItem="favorites" id="Su2-8J-h71"/>
+                    <tabBarItem key="tabBarItem" title="Animations" image="play.circle.fill" catalog="system" id="Su2-8J-h71"/>
                     <connections>
                         <outlet property="viewCard" destination="x7O-Lt-Tme" id="tQw-e0-qb9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFZ-tT-kXB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-91.304347826086968" y="-778.125"/>
+            <point key="canvasLocation" x="-984" y="85"/>
+        </scene>
+        <!--Lottie-->
+        <scene sceneID="OhH-lW-X6v">
+            <objects>
+                <viewController id="Orr-Ag-2gy" customClass="LottieViewController" customModule="BaseArch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZqJ-aU-1yS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2ju-X6-CZb">
+                                <rect key="frame" x="16" y="88" width="382" height="250"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VnH-CU-cQo">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="43.5"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Anim 1"/>
+                                        <connections>
+                                            <action selector="didTapAnimateButton:" destination="EwI-6U-yQ1" eventType="touchUpInside" id="HAL-uZ-krd"/>
+                                            <action selector="didTapAnimateButton:" destination="Orr-Ag-2gy" eventType="touchUpInside" id="eBu-CJ-SbB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aa-ap-vkL">
+                                        <rect key="frame" x="0.0" y="51.5" width="382" height="43.5"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Anim 2"/>
+                                        <connections>
+                                            <action selector="didTapAnimateButton:" destination="EwI-6U-yQ1" eventType="touchUpInside" id="2Vz-hc-FfX"/>
+                                            <action selector="didTapAnimateButton:" destination="Orr-Ag-2gy" eventType="touchUpInside" id="mSz-AA-edh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jR8-Mg-TbL">
+                                        <rect key="frame" x="0.0" y="103" width="382" height="44"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Anim 3"/>
+                                        <connections>
+                                            <action selector="didTapAnimateButton:" destination="Orr-Ag-2gy" eventType="touchUpInside" id="TFX-vL-1lG"/>
+                                            <action selector="didTapAnimateButton:" destination="EwI-6U-yQ1" eventType="touchUpInside" id="Z8n-8h-Vin"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnA-f0-QTE">
+                                        <rect key="frame" x="0.0" y="155" width="382" height="43.5"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Anim 4"/>
+                                        <connections>
+                                            <action selector="didTapAnimateButton:" destination="EwI-6U-yQ1" eventType="touchUpInside" id="8HU-vy-Vm7"/>
+                                            <action selector="didTapAnimateButton:" destination="Orr-Ag-2gy" eventType="touchUpInside" id="QW7-K6-U57"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUU-bE-r9T">
+                                        <rect key="frame" x="0.0" y="206.5" width="382" height="43.5"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Anim 5"/>
+                                        <connections>
+                                            <action selector="didTapAnimateButton:" destination="EwI-6U-yQ1" eventType="touchUpInside" id="03J-ly-Nlq"/>
+                                            <action selector="didTapAnimateButton:" destination="Orr-Ag-2gy" eventType="touchUpInside" id="n8e-af-US3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="COY-y4-fhU"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="uVZ-xo-dQK"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MlX-wo-ips">
+                                <rect key="frame" x="16" y="354" width="382" height="443"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Alm-N0-Lxp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2ju-X6-CZb" firstAttribute="leading" secondItem="Alm-N0-Lxp" secondAttribute="leading" constant="16" id="0LR-X2-6kn"/>
+                            <constraint firstItem="2ju-X6-CZb" firstAttribute="top" secondItem="Alm-N0-Lxp" secondAttribute="top" constant="44" id="2lO-qK-Jgg"/>
+                            <constraint firstItem="MlX-wo-ips" firstAttribute="top" secondItem="2ju-X6-CZb" secondAttribute="bottom" constant="16" id="9ON-r2-Dep"/>
+                            <constraint firstItem="Alm-N0-Lxp" firstAttribute="bottom" secondItem="MlX-wo-ips" secondAttribute="bottom" constant="16" id="YwH-0G-vmf"/>
+                            <constraint firstItem="Alm-N0-Lxp" firstAttribute="trailing" secondItem="2ju-X6-CZb" secondAttribute="trailing" constant="16" id="kIX-Va-5Cc"/>
+                            <constraint firstItem="Alm-N0-Lxp" firstAttribute="trailing" secondItem="MlX-wo-ips" secondAttribute="trailing" constant="16" id="kcV-vi-4jJ"/>
+                            <constraint firstItem="MlX-wo-ips" firstAttribute="leading" secondItem="Alm-N0-Lxp" secondAttribute="leading" constant="16" id="pZL-d0-YAk"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Lottie" image="arrow.up.bin.fill" catalog="system" id="spc-lq-hbG"/>
+                    <connections>
+                        <outlet property="lottieView" destination="MlX-wo-ips" id="Rl6-t2-Y0m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RUs-Na-9oI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-59.420289855072468" y="83.705357142857139"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3mB-HW-Q5m">
@@ -109,11 +202,12 @@
                     <connections>
                         <segue destination="c40-UW-d9Z" kind="relationship" relationship="viewControllers" id="UOQ-5D-Xeb"/>
                         <segue destination="EwI-6U-yQ1" kind="relationship" relationship="viewControllers" id="zam-Bo-W4p"/>
+                        <segue destination="Orr-Ag-2gy" kind="relationship" relationship="viewControllers" id="970-Jt-cB0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uy2-9w-HYa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-979" y="-365"/>
+            <point key="canvasLocation" x="-984" y="-778"/>
         </scene>
         <!--Home-->
         <scene sceneID="nbL-HA-dk5">
@@ -124,10 +218,12 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x10-OH-cOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-288" y="-222"/>
+            <point key="canvasLocation" x="-1961" y="-207"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.up.bin.fill" catalog="system" width="128" height="93"/>
+        <image name="play.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

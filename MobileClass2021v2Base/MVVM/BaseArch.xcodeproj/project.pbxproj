@@ -22,6 +22,11 @@
 		5268619927372D88003DACBD /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268619827372D88003DACBD /* HomeViewControllerTests.swift */; };
 		5268619B27372D96003DACBD /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268619A27372D96003DACBD /* HomeViewModelTests.swift */; };
 		5278B25B2753A95400239817 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 5278B25A2753A95400239817 /* Lottie */; };
+		5278B2612753CAF000239817 /* LottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278B25E2753CAF000239817 /* LottieViewController.swift */; };
+		5278B2622753CAF000239817 /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278B2602753CAF000239817 /* LottieViewModel.swift */; };
+		5278B2652753D15D00239817 /* 404.json in Resources */ = {isa = PBXBuildFile; fileRef = 5278B2642753D15D00239817 /* 404.json */; };
+		5278B2672753D16900239817 /* bouncingshapes.json in Resources */ = {isa = PBXBuildFile; fileRef = 5278B2662753D16900239817 /* bouncingshapes.json */; };
+		5278B2692753D17300239817 /* gamingtime.json in Resources */ = {isa = PBXBuildFile; fileRef = 5278B2682753D17300239817 /* gamingtime.json */; };
 		527F25DF2725CFA700C30E24 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 527F25DE2725CFA700C30E24 /* Alamofire */; };
 		527F25E12725E10000C30E24 /* MovieDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F25E02725E10000C30E24 /* MovieDetailDTO.swift */; };
 		527F25E32725EF9B00C30E24 /* HomeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F25E22725EF9B00C30E24 /* HomeDetailViewModel.swift */; };
@@ -89,6 +94,11 @@
 		524CB48E2720F9A100B9CD5C /* Curl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curl.swift; sourceTree = "<group>"; };
 		5268619827372D88003DACBD /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		5268619A27372D96003DACBD /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		5278B25E2753CAF000239817 /* LottieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieViewController.swift; sourceTree = "<group>"; };
+		5278B2602753CAF000239817 /* LottieViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieViewModel.swift; sourceTree = "<group>"; };
+		5278B2642753D15D00239817 /* 404.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 404.json; sourceTree = "<group>"; };
+		5278B2662753D16900239817 /* bouncingshapes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bouncingshapes.json; sourceTree = "<group>"; };
+		5278B2682753D17300239817 /* gamingtime.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gamingtime.json; sourceTree = "<group>"; };
 		527F25E02725E10000C30E24 /* MovieDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailDTO.swift; sourceTree = "<group>"; };
 		527F25E22725EF9B00C30E24 /* HomeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewModel.swift; sourceTree = "<group>"; };
 		52824293271B311A004A7223 /* BaseArchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseArchTests.swift; sourceTree = "<group>"; };
@@ -161,6 +171,7 @@
 		52216359271A7725008B7F3D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				5278B25C2753CAC200239817 /* Lottie */,
 				52DCC4E8271E43AB00E3EC40 /* API */,
 				5297C6DC2743327F00FF2F7C /* FavoritesUseCase */,
 				5221635B271A7750008B7F3D /* HomeUseCase */,
@@ -291,6 +302,42 @@
 				524539CA273881A600559D48 /* ViewModel */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		5278B25C2753CAC200239817 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				5278B2632753CED400239817 /* ModelsFiles */,
+				5278B25D2753CAF000239817 /* ViewController */,
+				5278B25F2753CAF000239817 /* ViewModel */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		5278B25D2753CAF000239817 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5278B25E2753CAF000239817 /* LottieViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5278B25F2753CAF000239817 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5278B2602753CAF000239817 /* LottieViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5278B2632753CED400239817 /* ModelsFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5278B2682753D17300239817 /* gamingtime.json */,
+				5278B2662753D16900239817 /* bouncingshapes.json */,
+				5278B2642753D15D00239817 /* 404.json */,
+			);
+			path = ModelsFiles;
 			sourceTree = "<group>";
 		};
 		528CFE0B2724D71C006BA86A /* Injection */ = {
@@ -571,8 +618,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5236D241271A765200EA5588 /* LaunchScreen.storyboard in Resources */,
+				5278B2692753D17300239817 /* gamingtime.json in Resources */,
 				524539C3273872C800559D48 /* MoviesTopRatedResponse200.json in Resources */,
+				5278B2652753D15D00239817 /* 404.json in Resources */,
 				5236D23E271A765200EA5588 /* Assets.xcassets in Resources */,
+				5278B2672753D16900239817 /* bouncingshapes.json in Resources */,
 				5236D23C271A764D00EA5588 /* Main.storyboard in Resources */,
 				52A2330D271CD56E003C4221 /* Home.storyboard in Resources */,
 				528CFE0A2724CC49006BA86A /* config.txt in Resources */,
@@ -606,6 +656,7 @@
 				52A0988D27419D600054E447 /* main.swift in Sources */,
 				52DCC4F9271E43CA00E3EC40 /* Networking.swift in Sources */,
 				5221635D271A7761008B7F3D /* HomeViewModel.swift in Sources */,
+				5278B2612753CAF000239817 /* LottieViewController.swift in Sources */,
 				52DCC4F4271E43CA00E3EC40 /* MoviesDTO.swift in Sources */,
 				528CFE0D2724D729006BA86A /* DependencyManager.swift in Sources */,
 				52DCC4F8271E43CA00E3EC40 /* APIError.swift in Sources */,
@@ -618,6 +669,7 @@
 				528CFE0F2724D7E0006BA86A /* DependencyInjector.swift in Sources */,
 				527F25E32725EF9B00C30E24 /* HomeDetailViewModel.swift in Sources */,
 				52DCC4FB271E43CA00E3EC40 /* HTTPMethod.swift in Sources */,
+				5278B2622753CAF000239817 /* LottieViewModel.swift in Sources */,
 				5221635F271A7768008B7F3D /* HomeViewController.swift in Sources */,
 				52DCC4FA271E43CA00E3EC40 /* CoreAPIService.swift in Sources */,
 			);
