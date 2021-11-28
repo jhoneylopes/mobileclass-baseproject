@@ -4,12 +4,13 @@ import Foundation
 
 protocol HomeViewModelProtocol: AnyObject {
     var homeDetailsIdentifier: String { get }
-    var didTapCell: ((_ identifier: String) -> Void)? { get set }
+    var didTapCell: ((_ identifier: String, _ index: Int) -> Void)? { get set }
+    var didFinishGetTopRatedMovies: ((MoviesDTO) -> Void)? { get set }
     var api: MovieService { get set }
 
     init(api: MovieService)
 
-    func goToHomeDetails()
+    func goToHomeDetails(movieID: Int)
     func didGetMovies()
 }
 
@@ -22,18 +23,19 @@ class HomeViewModel: HomeViewModelProtocol {
 
     var homeDetailsIdentifier = "HomeDetailViewController"
 
-    var didTapCell: ((String) -> ())?
+    var didTapCell: ((String, Int) -> Void)?
+    var didFinishGetTopRatedMovies: ((MoviesDTO) -> Void)?
 
-    func goToHomeDetails() {
-        didTapCell?(homeDetailsIdentifier)
+    func goToHomeDetails(movieID index: Int) {        
+        didTapCell?(homeDetailsIdentifier, index)
     }
 
     func didGetMovies() {
 
-        api.getMoviesTopRated(page: 1) { result in
+        api.getMoviesTopRated(page: 1) { [weak self] result in
             switch result {
             case .success(let data):
-                print(data)
+                self?.didFinishGetTopRatedMovies?(data)
             case .failure(let error):
                 print(error)
             }

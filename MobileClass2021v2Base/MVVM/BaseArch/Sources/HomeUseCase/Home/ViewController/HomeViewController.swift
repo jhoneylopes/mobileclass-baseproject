@@ -1,6 +1,7 @@
 //  Copyright © 2017 Jhoney Lopes. All rights reserved.
 
 import UIKit
+import Kingfisher
 
 class HomeViewController: UIViewController {
 
@@ -8,8 +9,13 @@ class HomeViewController: UIViewController {
 
     var viewModel: HomeViewModelProtocol! {
         didSet {
-            self.viewModel.didTapCell = { [unowned self] identifier in
-                self.performSegue(withIdentifier: identifier, sender: self)
+            self.viewModel.didTapCell = { [unowned self] identifier, index in
+                self.performSegue(withIdentifier: identifier, sender: index)
+            }
+
+            self.viewModel.didFinishGetTopRatedMovies = { [unowned self] movies in
+                self.data = movies
+                self.tableView.reloadData()
             }
         }
     }
@@ -17,6 +23,7 @@ class HomeViewController: UIViewController {
     // MARK: Properties
 
     @IBOutlet var tableView: UITableView!
+    private var data: MoviesDTO?
 
     // MARK: Init
 
@@ -41,9 +48,10 @@ class HomeViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == viewModel.homeDetailsIdentifier {
+            let id = (sender as? Int) ?? 0
             // Aqui vamos adicionar o item que será parte do detalhes
             let vc = segue.destination as? HomeDetailsViewController
-            vc?.movieID = "155" // TODO: ID temporário
+            vc?.movieID = String(describing: id)
         }
     }
 }
@@ -55,7 +63,8 @@ extension HomeViewController: UITableViewDelegate {
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
     ) {
-        viewModel.goToHomeDetails()
+        let id = data?.results?[safe: indexPath.row]?.id ?? 0
+        viewModel.goToHomeDetails(movieID: id)
     }
 }
 
@@ -67,9 +76,8 @@ extension HomeViewController: UITableViewDataSource {
         numberOfRowsInSection section: Int
     ) -> Int {
 
-        return 3
+        return data?.results?.count ?? 0
     }
-
 
     func tableView(
         _ tableView: UITableView,
@@ -77,10 +85,25 @@ extension HomeViewController: UITableViewDataSource {
     ) -> UITableViewCell {
 
         let cell = UITableViewCell()
-        cell.backgroundColor = .orange
+
+        guard let movie = data?.results?[safe: indexPath.row] else {
+            return cell
+        }
+        cell.imageView?.image = nil
+        let imageURL = URL(
+            string: CoreAPIService.defaultImageURL + (movie.poster_path ?? "")
+        )
+        cell.imageView?.kf.setImage(with: imageURL)
+        cell.textLabel?.text = movie.title
+        cell.textLabel?.numberOfLines = 0
+
         cell.isAccessibilityElement = true
         cell.accessibilityIdentifier = "HomeCell_\(indexPath.row)"
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 88
     }
 }
